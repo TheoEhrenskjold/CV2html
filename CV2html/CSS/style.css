@@ -1,0 +1,326 @@
+*{
+    box-sizing: border-box;    
+}
+
+.navbar{
+    background-color: #333;
+    overflow: hidden;
+    text-align: center;
+}
+.navbar a {
+    display: inline-block;
+    color: grey;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: lightgrey;
+    color: black;
+}
+.navbar a.active {
+    color: white;
+}
+
+
+#mainDiv {
+    width: 100%; 
+    margin: 0; 
+    text-align: center; 
+    color: 	#000000; 
+}
+
+.mainimage-container {
+    float: left;
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#mainimage {
+    position: absolute;
+    top: 20%; /* Added 'px' */
+    right: 10%;
+    width: 20%;
+    max-width: 50%;
+    height: auto;
+    border-radius: 50%;
+}
+
+#cimage {
+    position: absolute;
+    top: 20%; /* Added 'px' */
+    left: 10%; /* Added 'px' */
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    max-width: 50%;
+}
+
+
+
+
+
+
+#mainimage:hover{
+    box-shadow: 5px 5px 5px black;
+    
+}
+
+body{
+    background-attachment: fixed;
+    background-image: url(https://images.prismic.io/visithalland2/52142491-e401-4794-9c4c-1cb1c6bca697_Varberg_Kallbadhuset_2019_Varbergskommun_DestinationVarberg_FotografNatalieGreppi_HQ-90.jpg?ixlib=gatsbyFP&auto=compress%2Cformat&fit=max);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#bottomsec{
+    
+            text-align: center;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;            
+            border-radius: 8px;
+            box-shadow: 0 0 10 rgba(red, green, blue, alpha);
+            margin-top: 15%;
+    
+}
+
+#cvsec{
+    background-color: lavender;
+    border-radius: 5px;
+    padding: 5px 15px;
+    margin: 10px auto; 
+    max-width: fit-content;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin-top: 5%;
+}
+#vbgimg{
+    padding-bottom: 10px;
+}
+
+.portfoliocontainer {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+        
+}
+
+.image-containerportfolio {
+    position: relative;
+    width: 100%; 
+    max-width: 100%; 
+    text-align: center;
+}
+
+.image-containerportfolio img {
+    max-width: 100%; 
+    height: auto; 
+} 
+
+/* RESPONSIVE FOR 600PX */
+@media (max-width: 600px) { 
+    .image-containerportfolio {
+        flex: 0 0 50%; 
+    }
+    .image-containerportfolio img {
+        max-width: 100%; 
+        height: auto; 
+    }
+    #cvsec {
+        max-width: 55%; 
+    }
+    #vbgimg{
+        max-width: 100%;
+    }
+    #mainimage{
+        top: 40%;
+        width: 30%;
+    }
+    #cimage{
+        top: 35%;
+        left: 0;
+    }
+}
+
+
+/* MODAL FOR PORTFOLIO */
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 999; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75); 
+    justify-content: center; 
+    align-items: center; 
+}
+
+
+.modal:target {
+    display: flex;
+}
+
+
+.modal-content {
+    background-color: lavender;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+    max-width: 600px;
+    max-height: 100%;
+    overflow-y: auto; 
+    word-wrap: break-word;
+}
+
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #aaa;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+
+.modal-close:hover {
+    color: #000;
+    cursor: pointer;
+}
+
+/* CONTACT FORM */
+.contact-container {
+    width: 50%;
+    margin: 50px auto;
+    background-color: lavender;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-title {
+    text-align: center;
+}
+
+.contact-form-group {
+    margin-bottom: 20px;
+}
+
+.contact-label {
+    font-weight: bold;
+}
+
+.contact-input[type="text"],
+.contact-input[type="email"],
+.contact-textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-textarea {
+    resize: vertical;
+}
+
+.contact-submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-submit-btn:hover {
+    background-color: #45a049;
+}
+/*Bottom icons for GIT,INSTA, LINKEDIN */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 80px; 
+    left: 0; 
+    right: 0; 
+    z-index: 999;
+    margin: 0 auto;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    
+}
+
+.github-button, .linkedin-button, .instagram-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0; 
+}
+
+
+/* Modal */
+.HomeModal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+/* Modal content */
+.HomeModal .modal-content { 
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    text-align: center;
+}
+
+/* Close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+  
